@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class HashCodeExmpl1 {
     public static void main(String[] args) {
-        HashMap<Student, Double> map = new HashMap <>();
+        HashMap <Student, Double> map = new HashMap <>();
         Student st1 = new Student("Arthur", "Rakhmankulov", 3);
         Student st2 = new Student("Mariya", "Sidorova", 4);
         Student st3 = new Student("Vova", "Petrov", 2);
@@ -42,22 +42,21 @@ public class HashCodeExmpl1 {
     }
 }
 
-final class Student{
+final class Student {
     private final String name;
     private final String surname;
     private final int course;
 
-    Student(String name, String surname, int course) {
+    public Student(String name, String surname, int course) {
         this.name = name;
         this.surname = surname;
         this.course = course;
     }
 
-     void getName(){
+    void getName() {
         String name = this.name;
         System.out.println(name);
     }
-
 
 
     @Override
