@@ -22,7 +22,7 @@ public class LinkedHashMapExmpl1 {
         linkedHashMap.put(8.9, st5);
         linkedHashMap.put(9.9, st6);
         linkedHashMap.put(9.1, st7);
-        linkedHashMap.put(5.8, st1);
+        linkedHashMap.put(null, st1);
         System.out.println(linkedHashMap);
         System.out.println(linkedHashMap.get(2.8));
         System.out.println(linkedHashMap.get(4.2));
