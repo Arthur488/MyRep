@@ -83,5 +83,7 @@ public class Main {
         char resChar = (char)resCharASCII;
         System.out.println("resChar: " + resChar);
 
+        System.out.println("WORK!");
+
     }
 }

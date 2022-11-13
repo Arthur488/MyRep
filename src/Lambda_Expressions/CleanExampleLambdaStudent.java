@@ -16,16 +16,24 @@ public class CleanExampleLambdaStudent {
         students.add(st3);
         students.add(st4);
         students.add(st5);
-        System.out.println(students);
+        //System.out.println(students);
 
+        Predicate <Student> ps1 = s -> s.age > 30;
+        Predicate <Student> ps2 = s -> s.sex == 'm';
+        Predicate <Student> ps3 = s -> s.name.startsWith("A");
 
+        testStudents(students, ps2.negate());
         System.out.println("-------------------------------");
-        testStudents(students, (s) -> s.age > 30 && s.sex == 'm');
+        testStudents(students, ps1.and(ps2));
+        System.out.println("-------------------------------");
+        testStudents(students, ps1.and(ps2).or(ps3));
         System.out.println("-------------------------------");
         testStudents(students, (s) -> s.name.startsWith("A"));
         System.out.println("-------------------------------");
         testStudents(students, (s) -> s.averageGrade >= 8 && s.averageGrade <= 10);
         System.out.println("-------------------------------");
+
+
     }
 
     static void testStudents(ArrayList <Student> arrayList, Predicate <Student> filter) {
