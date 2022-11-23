@@ -34,10 +34,10 @@ public class HashCodeExmpl1 {
 //        System.out.println(st4.hashCode());
 //
 //        System.out.println(map.entrySet());
-//        for (Map.Entry<Student, Double> entry: map.entrySet()) {
+//        for (Map_Method.Entry<Student, Double> entry: map.entrySet()) {
 //            System.out.println(entry.getKey() + " : " + entry.getValue());
 //        }
-//        Map<Integer, String> map2 = new HashMap <>(16, 0.75f);
+//        Map_Method<Integer, String> map2 = new HashMap <>(16, 0.75f);
 
     }
 }

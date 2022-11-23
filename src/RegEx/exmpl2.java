@@ -11,19 +11,24 @@ public class exmpl2 {
         //String s2 = "ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghigklmnopqrstuvwxyz";
         String s2 = "ya@yahoo.com; on@mail.ru; ona@gmail.com; xersobachiy@ukr.net; ";
 
-        //Pattern pattern1 = Pattern.compile("[A-z]");
-        Pattern pattern1 = Pattern.compile("@\\w+[^.]");
+//        char ch;
+//        for (int i = 0; i < s2.length(); i++) {
+//            ch = s2.charAt(i);
+//            if(ch == '@'){
+//                while (s2.charAt(i + 1)!='.'){
+//                    System.out.print(s2.charAt(i + 1));
+//                    i++;
+//                }
+//                System.out.println();
+//
+//            }
+//        }
+
+        Pattern pattern1 = Pattern.compile("(@)(\\w+)(\\.)");
         Matcher matcher = pattern1.matcher(s2);
 
         while (matcher.find()){
-            System.out.println("position: " + matcher.start() + "   "  + matcher.group());
-//            String param1 = matcher.group(1);
-//            String param2 = matcher.group(2);
-//            String param3 = matcher.group(3);
-//            System.out.print(param1 + param2 + param3);
-            //System.out.println(matcher.group());
-
-
+            System.out.println(matcher.group(2));
         }
 
 

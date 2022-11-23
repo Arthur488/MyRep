@@ -18,7 +18,6 @@ public class Main {
 //        String stringToDelete = "lge";
         String fullString = "alliancegaming";
         String stringToDelete = "gaming";
-
         char[] charArrayF = new char[fullString.length()];
         char[] charArrayD = new char[fullString.length()];
         for (int i = 0; i < fullString.length(); i++) {

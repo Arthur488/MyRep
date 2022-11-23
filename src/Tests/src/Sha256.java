@@ -1,33 +1,56 @@
 package Tests.src;
 
-import java.security.SecureRandom;
-import java.util.Random;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 
 public class Sha256 {
-    public static void main(String[] args) {
+    private static HttpURLConnection con;
+    private static String tgToken = "5914830638:AAF8qU5LHIKRZ-L_2K8z8ZUfn8p7TkPKFSw";
+    private static int chatId = 793479882;
+    private static String urlToken = "https://api.telegram.org/bot"+tgToken+"/sendMessage";
 
-        Scanner scanner = new Scanner(System.in);
-        String string = scanner.nextLine();
+    public static void main(String[] args) throws IOException {
+        //текст сообщения
+        String txt = "ЛОХ ЧЕ!";
 
-        if (string.length() >= 6 && string.length() <= 20) {
-            char[] chars = {'a', 'b', 'c', 'd', 'e', 'f'};
-            int pos = 0;
-            Random Random = new Random();
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i <= 32; i++) {
-                int num = Random.nextInt(9 + 1);
-                pos = Random.nextInt(chars.length);
-                char ch = chars[pos];
-                stringBuilder.append(num).append(ch);
+        String urlParameters = "chat_id="+chatId+"&text="+txt;
+        byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8);
 
+        try {
 
+            URL url = new URL(urlToken);
+            con = (HttpURLConnection) url.openConnection();
+
+            con.setDoOutput(true);
+            con.setRequestMethod("POST");
+            con.setRequestProperty("User-Agent", "Java upread.ru client");
+            con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+
+            try (DataOutputStream wr = new DataOutputStream(con.getOutputStream())) {
+                wr.write(postData);
             }
-            System.out.print(stringBuilder);
+
+            StringBuilder content;
+
+            try (BufferedReader br = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()))) {
+                String line;
+                content = new StringBuilder();
+
+                while ((line = br.readLine()) != null) {
+                    content.append(line);
+                    content.append(System.lineSeparator());
+                }
+            }
+            System.out.println(content.toString());
+
+        } finally {
+            con.disconnect();
         }
-
-
     }
 }
-
-

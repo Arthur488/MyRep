@@ -23,7 +23,12 @@ public class ForEach {
             integer *= 2;
             System.out.println(integer);
         });
+        System.out.println("/////////////////////////");
         integerArrayList.forEach(System.out::println);
+        System.out.println("/////////////////////////");
+        integerArrayList.forEach(integer -> {
+            System.out.println(integer + " ");
+        });
 
     }
 }
