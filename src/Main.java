@@ -81,14 +81,5 @@ public class Main {
         System.out.println("resCharASCII = " + resCharASCII);
         char resChar = (char)resCharASCII;
         System.out.println("resChar: " + resChar);
-
-
-
-
-
-
-
-
-
     }
 }
