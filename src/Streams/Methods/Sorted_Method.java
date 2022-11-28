@@ -1,6 +1,7 @@
 package Streams.Methods;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Sorted_Method {
     public static void main(String[] args) {

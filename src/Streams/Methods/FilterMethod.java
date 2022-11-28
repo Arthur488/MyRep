@@ -28,7 +28,9 @@ public class FilterMethod {
         students.add(st4);
         students.add(st5);
         System.out.println(students);
-
+//        System.out.println("///////////////////");
+//        students = (ArrayList<Student>) students.stream().filter(student -> student.age > 27).collect(Collectors.toList());
+//        System.out.println(students);
 //        students = (ArrayList) (students.stream().filter(student -> student.age > 22 && student.averageGrade < 7.2).collect(Collectors.toList()));
 //        System.out.println(students);
 

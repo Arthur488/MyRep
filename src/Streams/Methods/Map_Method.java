@@ -16,6 +16,7 @@ public class Map_Method {
 //            list.set(i, String.valueOf(list.get(i).length()));
 //        }
 
+
         List <Integer> integerList = list.stream().map(element -> element.length()).collect(Collectors.toList());
 
         System.out.println(integerList);

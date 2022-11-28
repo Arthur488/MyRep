@@ -17,7 +17,7 @@ public class Main {
 //        String fullString = "algemin";
 //        String stringToDelete = "lge";
         String fullString = "alliancegaming";
-        String stringToDelete = "gaming";
+        String stringToDelete = "l";
         char[] charArrayF = new char[fullString.length()];
         char[] charArrayD = new char[fullString.length()];
         for (int i = 0; i < fullString.length(); i++) {
@@ -70,16 +70,23 @@ public class Main {
             System.out.print("[" + el + "]");
         }
 
-        System.out.println();
-        char ch1 = 'a';
-        char ch2 = 'b';
-        System.out.println("ch1: " + ch1 + " | " + "ch2: " + ch2);
-        int ascii1 = ch1;
-        int ascii2 = ch2;
-        System.out.println(ch1 + ": " + ascii1 + " | " + ch2 + ": " + ascii2);
-        int resCharASCII = ascii1 + ascii2;
-        System.out.println("resCharASCII = " + resCharASCII);
-        char resChar = (char)resCharASCII;
-        System.out.println("resChar: " + resChar);
+
+
+
+
+//        System.out.println();
+//        char ch1 = 'a';
+//        char ch2 = 'b';
+//        System.out.println("ch1: " + ch1 + " | " + "ch2: " + ch2);
+//        int ascii1 = ch1;
+//        int ascii2 = ch2;
+//        System.out.println(ch1 + ": " + ascii1 + " | " + ch2 + ": " + ascii2);
+//        int resCharASCII = ascii1 + ascii2;
+//        System.out.println("resCharASCII = " + resCharASCII);
+//        char resChar = (char)resCharASCII;
+//        System.out.println("resChar: " + resChar);
+
+
+
     }
 }
