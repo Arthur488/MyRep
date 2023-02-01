@@ -15,7 +15,7 @@ public class FileWriterExample {
 
         FileWriter writer = null;
         try {
-            writer = new FileWriter("C:\\Users\\Arthur Rakhmankulov\\Desktop\\test.txt", true);
+            writer = new FileWriter("C:\\Users\\x4pla\\Desktop\\test.txt", true);
 
             writer.write(rubai);
             writer.write(s);

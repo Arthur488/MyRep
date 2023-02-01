@@ -25,7 +25,7 @@ public class Solution {
     }
 }
 
-//Понедилок 10:00
+
 interface AdvancedArithmetic {
     int divisor_sum(int n);
 }

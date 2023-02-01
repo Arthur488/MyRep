@@ -9,7 +9,7 @@ public class FileReaderExample {
 
         FileReader fileReader = null;
         try {
-            fileReader = new FileReader("C:\\Users\\Arthur Rakhmankulov\\Desktop\\test.txt");
+            fileReader = new FileReader("C:\\Users\\x4pla\\Desktop\\test.txt");
             int character;
             while ((character = fileReader.read()) != -1){
                 System.out.print((char) character);
