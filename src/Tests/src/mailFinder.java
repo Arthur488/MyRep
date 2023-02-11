@@ -7,12 +7,13 @@ public class mailFinder {
     public static void main(String[] args) {
         String emails = "ya@yahoo.com; on@mail.ru; ona@gmail.com; xersobachiy@ukr.net; ";
 
-        //Pattern email_pattern = Pattern.compile("\\w+\\.\\w+");
-        Pattern email_pattern = Pattern.compile("[^@]\\w+[^\\.]");
+//        Pattern email_pattern = Pattern.compile("(@)(\\w+)(\\.)(\\w+)(;)");
+        Pattern email_pattern = Pattern.compile("(@)(\\w+\\.\\w+)(;)");
         Matcher matcher = email_pattern.matcher(emails);
 
-        while (matcher.find()){
-            System.out.println(matcher.group());
+        while (matcher.find()) {
+//            System.out.println(matcher.group(2) + matcher.group(3) + matcher.group(4));
+            System.out.println(matcher.group(2));
         }
 
         //whatsYourMail(emails);
